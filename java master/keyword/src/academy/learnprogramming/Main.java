@@ -16,11 +16,10 @@ public class Main {
 //		} else {
 //        	System.out.println("Got here");
 //		}
-		if (gameOver == true) {
-			int finalScore = score + (levelCompleted * bonus);
-			finalScore += 1000;
-			System.out.println("Your final score was" + finalScore);
-		}
+
+
+		calculateScore(true, 800, levelCompleted, bonus);
+
 
 //		int savedFinalScore = finalScore;
 //
@@ -41,4 +40,15 @@ public class Main {
 			System.out.println("Your final score was" + finalScore);
 		}
     }
+
+    public static void calculateScore(boolean gameOver, int score, int levelCompleted, int bonus){
+
+
+		if (gameOver == true) {
+			int finalScore = score + (levelCompleted * bonus);
+			finalScore += 1000;
+			System.out.println("Your final score was" + finalScore);
+		}
+
+	}
 }
