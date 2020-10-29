@@ -17,8 +17,17 @@ public class Main {
 //        	System.out.println("Got here");
 //		}
 
+		int highScore = calculateScore(gameOver, score, levelCompleted, bonus);
+		System.out.println("Your final score was " + highScore);
 
-		calculateScore(true, 800, 5, 100);
+		score = 1000;
+		levelCompleted = 8;
+		bonus = 200;
+
+		highScore = calculateScore(gameOver, score, levelCompleted, bonus);
+		System.out.println("Your final score was " + highScore);
+
+
 
 
 //		int savedFinalScore = finalScore;
@@ -32,18 +41,18 @@ public class Main {
 //			int finalScore = newscore + (newlevelCompleted * newbonus);
 //			System.out.println("Your final score was" + finalScore);
 //		}
-		calculateScore(true, 10000, 8 , 200);
+
 
     }
 
-    public static void calculateScore(boolean gameOver, int score, int levelCompleted, int bonus){
+    public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus){
 
 
 		if (gameOver == true) {
 			int finalScore = score + (levelCompleted * bonus);
-			finalScore += 1000;
-			System.out.println("Your final score was" + finalScore);
+			finalScore += 2000;
+			return finalScore;
 		}
-
+		return -1;
 	}
 }
